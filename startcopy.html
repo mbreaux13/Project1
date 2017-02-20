@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="css/fancy-buttons.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+<div id="pagepiling">
+	<div class="section">
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-4">
+  			<a href="#about.html"><img src="img/musicnotes1.png" class="img-responsive m1" alt="musicnotes1"></a>
+  		</div>
+  		<div class="col-md-5">
+  			<a href="#skills.html"><img src="img/musicnotes2.png" class="img-responsive m2" alt="musicnotes2"></a>
+  		</div>
+  	</div>
+
+	<div class="row">
+		<div class="col-md-4">
+			<a href="#experience.html"><img src="img/musicnotes3.png" class="center-block img-responsive m3" alt="musicnotes3"></a>
+		</div>
+  		<div class="">
+  			<img src="img/9c4eaqMoi.png" class="center-block img-responsive fancy-button boombox" alt="boombox">
+  		</div>
+  		<div class="col-xs-12 col-md-4"></div>
+	</div>
+	</div>
+
+	<div class="section">
+		<div class="row">
+			<div class="col-md-12">
+				<div id="typewriteText"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="row">
+			<div class="col-md-12">
+				<div id="typewriteText2"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="row">
+			<div class="col-md-12">
+				<div id="typewriteText3"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="row">
+			<div class="col-md-8">
+				<div id="typewriteText4"></div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
+<script src="js/fancy-buttons.js"></script>
+<script src="js/typewrite.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+			/*
+			* Plugin intialization
+			*/
+	    	$('#pagepiling').pagepiling({
+	    		menu: '#menu',
+	    		anchors: ['startcopy.html', 'about.html', 'skills.html', 'experience.html', 'projects.html'],
+			    sectionsColor: ['white', '#ee005a', '#2C3E50', '#39C'],
+			    navigation: {
+			    	'position': 'right',
+			   		'tooltips': ['Home', 'About', 'Skills', 'Experience', 'Projects']
+			   	},
+			    afterRender: function(){
+			    	$('#pp-nav').addClass('custom');
+			    },
+			    afterLoad: function(anchorLink, index){
+			    	if(index>1){
+			    		$('#pp-nav').removeClass('custom');
+			    	}else{
+			    		$('#pp-nav').addClass('custom');
+			    	}
+			    }
+			});
+			/*
+		    * Internal use of the demo website
+		    */
+		    $('#showExamples').click(function(e){
+				e.stopPropagation();
+				e.preventDefault();
+				$('#examplesList').toggle();
+			});
+			$('html').click(function(){
+				$('#examplesList').hide();
+			});
+
+			$('#typewriteText').typewrite({
+                actions: [
+                    {type: 'Who Am I? '},
+                    
+                ]
+            });
+
+            $('#typewriteText2').typewrite({
+                actions: [
+                    {type: 'My skills: '},
+                    
+                ]
+            });
+
+            $('#typewriteText3').typewrite({
+                actions: [
+                    {type: 'Current Experience: '},
+                    
+                ]
+            });
+
+            $('#typewriteText4').typewrite({
+                actions: [
+                    {type: 'Projects I&#39;ve Done: '},
+                    
+                ]
+            });
+	    });
+</script>
+</body>
+</html>
