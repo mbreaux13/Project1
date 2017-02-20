@@ -1,0 +1,28 @@
+* {
+background-color: #822e9e;
+}
+
+h1 {
+	color: black;
+}
+
+.boombox {
+	padding: 0px 0px 0px 0px;
+}
+
+.m1 {
+	width: 200px; 
+	height: 150px;
+}
+
+.m2 {
+	width: 70px;
+	height: 80px;
+}
+
+.m3 {
+	width: 70px;
+	height: 70px;
+}
+
+#typewriteText, #typewriteText2, #typewriteText3, #typewriteText4{color: #fff;font-size: 50px; font-family: 'Open Sans', Arial, Helvetica, sans-serif; width: 35%; margin-left: 20px;}
